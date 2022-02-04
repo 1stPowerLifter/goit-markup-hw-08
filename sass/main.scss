@@ -1,0 +1,23 @@
+@import './utils/vars';
+@import './base/reset';
+@import './base/base';
+@import './components/container';
+@import './utils/hidden';
+@import './components/standart-components';
+@import './components/backdrop';
+
+// modal window //
+@import './layout/modal';
+@import './layout/form';
+// header footer //
+@import './layout/header';
+@import './layout/footer';
+// index.html //
+@import './layout/index/hero';
+@import './layout/index/benefits';
+@import './layout/index/about';
+@import './layout/index/team';
+@import './layout/index/clients';
+// portfolio.html //
+@import './layout/portfolio/search';
+@import './layout/portfolio/product';

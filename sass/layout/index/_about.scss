@@ -1,0 +1,26 @@
+.about {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+  &__text {
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--first-color);
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  &__item {
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 50px;
+    margin-bottom: 94px;
+    position: relative;
+    height: 294px;
+  }
+}
