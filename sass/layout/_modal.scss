@@ -17,7 +17,7 @@
   }
   .backdrop.is-hidden & {
     transform: translate(-50%, -250%) scale(0.3) rotate(90deg);
-    background: var(--brand-color);
+    background: getColor('brand');
   }
   &__btn {
     background-color: transparent;
@@ -32,10 +32,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--third-color);
+    color: getColor('black');
     &:hover,
     &:focus {
-      color: var(--brand-color);
+      color: getColor('brand');
     }
   }
   &__icon-close {
@@ -44,11 +44,12 @@
     fill: currentColor;
   }
   &__title {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: calc(23 / 20);
+    @include font(20px, 700, 1.5, 0.03em);
     text-align: center;
-    color: var(--third-color);
+    color: getColor('black');
     margin-bottom: 12px;
+    @include desk {
+      @include font(20px, 700, 1.15, 0.03em);
+    }
   }
 }

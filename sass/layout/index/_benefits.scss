@@ -8,7 +8,7 @@
   }
   &__box {
     height: 120px;
-    background-color: var(--bg-color);
+    background-color: getColor('bg');
     border-radius: 4px;
     flex-basis: calc(100% / 4 - 30px);
     display: flex;
@@ -25,12 +25,9 @@
     flex-basis: calc(100% / 4 - 30px);
   }
   &__title {
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    @include font(14px, 700, 1.14, 00.03em);
     text-transform: uppercase;
     margin-bottom: 10px;
-  }
-  &__text {
-    line-height: calc(24 / 14);
+    color: getColor('black');
   }
 }

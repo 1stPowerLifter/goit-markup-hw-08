@@ -30,16 +30,12 @@
     padding: 20px 24px 19px 24px;
   }
   &__title {
-    font-size: 18px;
-    line-height: calc(36 / 18);
-    letter-spacing: 0.06em;
+    @include font(18px, 700, 2, 0.06em);
     margin-bottom: 4px;
-    color: var(--third-color);
+    color: getColor('black');
   }
   &__post-title {
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    color: var(--second-color);
+    @include font(16px, 400, 1.87, 0.03em);
   }
 }
 .description {
@@ -69,12 +65,11 @@
     &::-webkit-scrollbar-thumb {
       width: 10px;
       background-color: var(--btn-hover);
-      outline: 1px solid var(--second-color);
+      outline: 1px solid getColor('grey');
     }
   }
   &__text {
-    font-size: 18px;
-    line-height: calc(28 / 18);
-    color: var(--first-color);
+    @include font(18px, 400, 1.55, 0.03em);
+    color: getColor('white');
   }
 }

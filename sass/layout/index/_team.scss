@@ -1,5 +1,5 @@
 .team {
-  background: var(--bg-color);
+  background: getColor('bg');
   &__wrap {
     padding: 94px 15px;
   }
@@ -9,20 +9,17 @@
     margin-left: -30px;
   }
   &__name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(19 / 16);
+    color: getColor('black');
+    @include font(16px, 500, 1.19, 00.03em);
     text-align: center;
     margin-bottom: 10px;
   }
   &__text {
-    font-size: 16px;
-    line-height: calc(19 / 16);
+    @include font(16px, 400, 1.19, 00.03em);
     text-align: center;
-    color: var(--second-color);
   }
   &__item {
-    background: var(--first-color);
+    background: getColor('white');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -48,14 +45,14 @@
     }
   }
   &__link {
-    background: var(--first-color);
-    color: var(--icon-color);
+    background: getColor('white');
+    color: getColor('icon');
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
-      color: var(--first-color);
-      background-color: var(--brand-color);
+      color: getColor('white');
+      background-color: getColor('brand');
     }
   }
   &__box {

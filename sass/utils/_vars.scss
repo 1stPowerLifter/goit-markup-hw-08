@@ -1,9 +1,13 @@
-:root {
-  --brand-color: #2196f3;
-  --first-color: #ffffff;
-  --second-color: #757575;
-  --third-color: #212121;
-  --icon-color: #afb1b8;
-  --bg-color: #f5f4fa;
-  --btn-hover: #188ce8;
+$colors: (
+  'brand': #2196f3,
+  'white': #ffffff,
+  'grey': #757575,
+  'black': #212121,
+  'icon': #afb1b8,
+  'bg': #f5f4fa,
+  'btn-h': #188ce8,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
 }

@@ -1,13 +1,4 @@
-:root {
-  --brand-color: #2196f3;
-  --first-color: #ffffff;
-  --second-color: #757575;
-  --third-color: #212121;
-  --icon-color: #afb1b8;
-  --bg-color: #f5f4fa;
-  --btn-hover: #188ce8;
-}
-
+@charset "UTF-8";
 p,
 h1,
 h2,
@@ -25,6 +16,7 @@ ul {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .list {
@@ -33,9 +25,10 @@ ul {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--third-color);
+  color: #757575;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 400;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -48,15 +41,33 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--second-color);
-  outline: 1px solid var(--second-color);
+  background-color: #757575;
+  outline: 1px solid #757575;
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (mіn-width: 480px) {
+  .container {
+    min-width: 320px;
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -76,15 +87,38 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  color: var(--brand-color);
+  color: #2196f3;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 
 .title {
-  font-size: 36px;
-  line-height: calc(42 / 36);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #212121;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 
 button {
@@ -92,14 +126,14 @@ button {
 }
 
 .btn {
-  background: var(--brand-color);
+  background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  font-weight: bold;
   font-size: 16px;
-  line-height: calc(30 / 16);
+  font-weight: 700;
+  line-height: 1.87;
   letter-spacing: 0.06em;
-  color: var(--first-color);
+  color: #ffffff;
   width: 200px;
   height: 50px;
   border: none;
@@ -107,7 +141,7 @@ button {
 }
 
 .btn:hover, .btn:focus {
-  background: var(--btn-hover);
+  background: #188ce8;
 }
 
 .backdrop {
@@ -146,7 +180,7 @@ button {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -250%) scale(0.3) rotate(90deg);
-  background: var(--brand-color);
+  background: #2196f3;
 }
 
 .modal__btn {
@@ -162,11 +196,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--third-color);
+  color: #212121;
 }
 
 .modal__btn:hover, .modal__btn:focus {
-  color: var(--brand-color);
+  color: #2196f3;
 }
 
 .modal__icon-close {
@@ -176,12 +210,22 @@ button {
 }
 
 .modal__title {
-  font-weight: bold;
   font-size: 20px;
-  line-height: calc(23 / 20);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   text-align: center;
-  color: var(--third-color);
+  color: #212121;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form__box {
@@ -196,7 +240,7 @@ button {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.01em;
-  color: var(--third-color);
+  color: #212121;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -208,7 +252,7 @@ button {
 }
 
 .form__input:focus, .form__input:hover {
-  border-color: var(--brand-color);
+  border-color: #2196f3;
 }
 
 .form__textarea {
@@ -231,19 +275,18 @@ button {
 }
 
 .form__textarea::-webkit-scrollbar-thumb {
-  background-color: var(--brand-color);
-  outline: 1px solid var(--second-color);
+  background-color: #2196f3;
+  outline: 1px solid #757575;
 }
 
 .form__textarea:focus, .form__textarea:hover {
-  border-color: var(--brand-color);
+  border-color: #2196f3;
 }
 
 .form__name {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  color: var(--second-color);
   display: block;
   margin-bottom: 4px;
 }
@@ -254,13 +297,13 @@ button {
   position: absolute;
   left: 15px;
   top: 28px;
-  fill: var(--third-color);
+  fill: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input:focus + .form__icon,
 .form__input:hover + .form__icon {
-  fill: var(--brand-color);
+  fill: #2196f3;
 }
 
 .form__btn-box {
@@ -272,7 +315,6 @@ button {
 .checkbox__text {
   font-size: 14px;
   line-height: calc(24 / 14);
-  color: var(--second-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +322,7 @@ button {
 }
 
 .checkbox__span {
-  border: 2px solid var(--third-color);
+  border: 2px solid #212121;
   border-radius: 2px;
   box-sizing: border-box;
   display: flex;
@@ -301,15 +343,15 @@ button {
 
 .checkbox:checked + .checkbox__text .checkbox__span {
   border: none;
-  background-color: var(--brand-color);
+  background-color: #2196f3;
 }
 
 .checkbox:checked + .checkbox__text .checkbox__icon {
-  fill: var(--first-color);
+  fill: #ffffff;
 }
 
 .checkbox__link {
-  color: var(--brand-color);
+  color: #2196f3;
   margin-left: 5px;
   text-decoration: underline;
 }
@@ -324,7 +366,7 @@ button {
 }
 
 .header__span {
-  color: var(--third-color);
+  color: #212121;
 }
 
 .header__address {
@@ -333,10 +375,10 @@ button {
 }
 
 .header__contact {
+  font-size: 14px;
   font-weight: 500;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--second-color);
   display: flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -351,7 +393,7 @@ button {
 }
 
 .header__contact:focus, .header__contact:hover {
-  color: var(--brand-color);
+  color: #2196f3;
 }
 
 .header__icon {
@@ -374,14 +416,15 @@ button {
 
 .nav__link {
   color: inherit;
+  font-size: 14px;
   font-weight: 500;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__link:focus, .nav__link:hover {
-  color: var(--brand-color);
+  color: #2196f3;
 }
 
 .nav__link_size {
@@ -390,13 +433,13 @@ button {
 
 .current {
   position: relative;
-  color: var(--brand-color);
+  color: #2196f3;
 }
 
 .current::after {
   content: '';
   position: absolute;
-  background: var(--brand-color);
+  background: #2196f3;
   left: 25px;
   bottom: 0;
   border-radius: 2px;
@@ -420,7 +463,7 @@ button {
 }
 
 .footer__span {
-  color: var(--first-color);
+  color: #ffffff;
 }
 
 .address__wrap {
@@ -441,22 +484,20 @@ button {
 .address__link {
   font-family: inherit;
   font-style: normal;
-  line-height: calc(24 / 14);
-  color: var(--first-color);
+  color: #ffffff;
 }
 
 .address__contact {
   font-family: Roboto;
   font-style: normal;
-  line-height: calc(24 / 14);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .social__title {
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14286;
   text-transform: uppercase;
-  color: var(--first-color);
+  color: #ffffff;
 }
 
 .social__title_m_bottom {
@@ -472,7 +513,7 @@ button {
 }
 
 .social__link:hover, .social__link:focus {
-  background-color: var(--brand-color);
+  background-color: #2196f3;
 }
 
 .social__box {
@@ -488,7 +529,7 @@ button {
 .social__icon {
   height: 20px;
   width: 20px;
-  fill: var(--first-color);
+  fill: #ffffff;
 }
 
 .subscription {
@@ -497,9 +538,9 @@ button {
 
 .subscription__title {
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14286;
   text-transform: uppercase;
-  color: var(--first-color);
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -511,11 +552,11 @@ button {
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  background: #2f303a;
+  background: transparent;
   border-radius: 4px;
   margin-right: 12px;
   width: 358px;
-  color: var(--first-color);
+  color: #ffffff;
   outline: none;
   padding: 15px 16px;
 }
@@ -552,13 +593,13 @@ button {
 }
 
 .hero__title {
-  font-weight: 900;
   font-size: 44px;
-  line-height: calc(60 / 44);
-  text-align: center;
+  font-weight: 900;
+  line-height: 1.36;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
-  color: var(--first-color);
+  color: #ffffff;
   width: 700px;
   height: 120px;
   margin-bottom: 30px;
@@ -574,7 +615,7 @@ button {
 
 .benefits__box {
   height: 120px;
-  background-color: var(--bg-color);
+  background-color: #f5f4fa;
   border-radius: 4px;
   flex-basis: calc(100% / 4 - 30px);
   display: flex;
@@ -595,13 +636,12 @@ button {
 
 .benefits__title {
   font-size: 14px;
-  line-height: calc(16 / 14);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-
-.benefits__text {
-  line-height: calc(24 / 14);
+  color: #212121;
 }
 
 .about__list {
@@ -611,10 +651,10 @@ button {
 }
 
 .about__text {
-  line-height: calc(16 / 14);
+  line-height: 1.14286;
   text-align: center;
   text-transform: uppercase;
-  color: var(--first-color);
+  color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
   padding: 27px;
   width: 100%;
@@ -632,7 +672,7 @@ button {
 }
 
 .team {
-  background: var(--bg-color);
+  background: #f5f4fa;
 }
 
 .team__wrap {
@@ -646,22 +686,25 @@ button {
 }
 
 .team__name {
-  font-weight: 500;
+  color: #212121;
   font-size: 16px;
-  line-height: calc(19 / 16);
+  font-weight: 500;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .team__text {
   font-size: 16px;
-  line-height: calc(19 / 16);
+  font-weight: 400;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   text-align: center;
-  color: var(--second-color);
 }
 
 .team__item {
-  background: var(--first-color);
+  background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc(100% / 4 - 30px);
@@ -686,14 +729,14 @@ button {
 }
 
 .social-list__link {
-  background: var(--first-color);
-  color: var(--icon-color);
+  background: #ffffff;
+  color: #afb1b8;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list__link:hover, .social-list__link:focus {
-  color: var(--first-color);
-  background-color: var(--brand-color);
+  color: #ffffff;
+  background-color: #2196f3;
 }
 
 .social-list__box {
@@ -741,12 +784,12 @@ button {
 }
 
 .clients__link {
-  color: var(--icon-color);
+  color: #afb1b8;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__link:focus, .clients__link:hover {
-  color: var(--brand-color);
+  color: #2196f3;
 }
 
 .clients__icon {
@@ -766,11 +809,12 @@ button {
 }
 
 .search__btn {
-  background: var(--bg-color);
+  background: #f5f4fa;
   border-radius: 4px;
-  font-weight: 500;
   font-size: 16px;
-  line-height: calc(26 / 16);
+  font-weight: 500;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
   text-align: center;
   border: none;
   padding: 6px 22px;
@@ -778,9 +822,9 @@ button {
 }
 
 .search__btn:hover, .search__btn:focus {
-  background: var(--brand-color);
+  background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--first-color);
+  color: #ffffff;
 }
 
 .product__list {
@@ -819,16 +863,18 @@ button {
 
 .product__title {
   font-size: 18px;
-  line-height: calc(36 / 18);
+  font-weight: 700;
+  line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
-  color: var(--third-color);
+  color: #212121;
 }
 
 .product__post-title {
   font-size: 16px;
-  line-height: calc(30 / 16);
-  color: var(--second-color);
+  font-weight: 400;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
 }
 
 .description {
@@ -865,12 +911,14 @@ button {
 .description__box::-webkit-scrollbar-thumb {
   width: 10px;
   background-color: var(--btn-hover);
-  outline: 1px solid var(--second-color);
+  outline: 1px solid #757575;
 }
 
 .description__text {
   font-size: 18px;
-  line-height: calc(28 / 18);
-  color: var(--first-color);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
