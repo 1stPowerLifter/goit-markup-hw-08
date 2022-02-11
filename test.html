@@ -15,103 +15,261 @@
     <title lang="en">Web Studio</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container header__wrap">
-            <nav class="nav">
-                <a class="link logo nav__logo nav__logo_size" href="index.html" lang="en">
-                    Web<span class="header__span">Studio</span>
+    <div class="container product">
+        <ul class="list product__list">
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img.jpg 1x,
+                                                ./images/product/portfolio_img_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img_tab.jpg 1x,
+                                                ./images/product/portfolio_img_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img_mob.jpg 1x,
+                                                ./images/product/portfolio_img_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img.jpg" alt="ноутбук">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">Технокряк это современная площадка распространения
+                                    коронавируса. Компании используют
+                                    эту платформу для цифрового
+                                    шпионажа и атак на защищённые сервера конкурентов.</p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Технокряк</h2>
+                            <p class="product__post-title">Веб-сайт</p>
+                        </div>
+                    </div>
                 </a>
-                <ul class="list nav__list">
-                    <li class="nav__item">
-                        <a class="link nav__link_size nav__link" href="index.html">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="link current current_size nav__link_size nav__link" href="portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="link nav__link_size nav__link" href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <ul class="list header__address">
-                <li class="header__item">
-                    <a class="link header__contact header__contact_size " href="mailto:info@devstudio.com">
-                        <svg class="header__icon header__icon_mail">
-                            <use href="images/icons.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="header__item">
-                    <a class="link header__contact header__contact_size" href="tel:+380961111111">
-                        <svg class="header__icon header__icon_tel">
-                            <use href="images/icons.svg#icon-tel"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
-            <button class="header__btn" type="button" data-mobile-menu-open>
-                <svg class="heder__icon-open">
-                    <use href="images/icons.svg#icon-menu"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="mob-menu is-hidden" data-mobile-menu>
-            <div class="mob-menu__wrap">
-                <div class="mob-menu_top">
-                    <button class="mob-menu__btn" data-mobile-menu-close>
-                        <svg class="mob-menu__icon-close">
-                            <use href="images/icons.svg#icon-modal-close"></use>
-                        </svg>
-                    </button>
-                    <ul class="list mob-menu__mob-nav mob-nav">
-                        <li class="mob-nav__item">
-                            <a class="link mob-nav__link " href="index.html">Студия</a>
-                        </li>
-                        <li class="mob-nav__item">
-                            <a class="link mob-nav__link " href="portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="mob-nav__item">
-                            <a class="link mob-nav__link " href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mob-menu_bottom">
-                    <ul class="list mob-menu__address-mob address-mob ">
-                        <li class="address-mob__item address-mob__item_top ">
-                            <a class="link address-mob__contact " href="mailto:info@devstudio.com">
-                                info@devstudio.com</a>
-                        </li>
-                        <li class="address-mob__item address-mob__item_bottom">
-                            <a class="link address-mob__contact " href="tel:+380961111111">
-                                +38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                    <ul class="list mob-menu__social-mob social-mob">
-                        <li class="social-mob__item">
-                            <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
-                                Instagram
-                            </a>
-                        </li>
-                        <li class="social-mob__item">
-                            <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
-                                Twitter
-                            </a>
-                        </li>
-                        <li class="social-mob__item">
-                            <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
-                                Facebook
-                            </a>
-                        </li>
-                        <li class="social-mob__item">
-                            <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
-                                LinkedIn
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img2.jpg 1x,
+                                                ./images/product/portfolio_img2_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img2_tab.jpg 1x,
+                                                ./images/product/portfolio_img2_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img2_mob.jpg 1x,
+                                                ./images/product/portfolio_img2_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img2.jpg" alt="баскетболисты">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, non?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Постер New Orlean vs Golden Star</h2>
+                            <p class="product__post-title">Дизайн</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img3.jpg 1x,
+                                                ./images/product/portfolio_img3_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img3_tab.jpg 1x,
+                                                ./images/product/portfolio_img3_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img3_mob.jpg 1x,
+                                                ./images/product/portfolio_img3_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img3.jpg" alt="эмблема ресторана">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, vel!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Ресторан Seafood</h2>
+                            <p class="product__post-title">Приложение</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img4.jpg 1x,
+                                                ./images/product/portfolio_img4_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img4_tab.jpg 1x,
+                                                ./images/product/portfolio_img4_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img4_mob.jpg 1x,
+                                                ./images/product/portfolio_img4_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img4.jpg" alt="наушники">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, atque?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Проект Prime</h2>
+                            <p class="product__post-title">Маркетинг</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img5.jpg 1x,
+                                                ./images/product/portfolio_img5_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img5_tab.jpg 1x,
+                                                ./images/product/portfolio_img5_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img5_mob.jpg 1x,
+                                                ./images/product/portfolio_img5_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img5.jpg" alt="кубики">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi fugit enim,
+                                    similique incidunt earum suscipit ipsam recusandae officiis accusamus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Проект Boxes</h2>
+                            <p class="product__post-title">Приложение</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img6.jpg 1x,
+                                                                            ./images/product/portfolio_img6_x2.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img6_tab.jpg 1x,
+                                                                            ./images/product/portfolio_img6_tab_x2.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img6_mob.jpg 1x,
+                                                                            ./images/product/portfolio_img6_mob_x2.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img6.jpg" alt="экран компьютера">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, porro.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title" lang="en">Inspiration has no Borders</h2>
+                            <p class="product__post-title">Веб-сайт</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img7.jpg 1x,
+                                                ./images/product/portfolio_img7_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img7_tab.jpg 1x,
+                                                ./images/product/portfolio_img7_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img7_mob.jpg 1x,
+                                                ./images/product/portfolio_img7_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img7.jpg" alt="журнал">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, atque?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Издание Limited Edition</h2>
+                            <p class="product__post-title">Дизайн</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img8.jpg 1x,
+                                                ./images/product/portfolio_img8_x2.jpg 2x" media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img8_tab.jpg 1x,
+                                                ./images/product/portfolio_img8_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img8_mob.jpg 1x,
+                                                ./images/product/portfolio_img8_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img8.jpg" alt="вкладыш">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, dolor.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title">Проект LAB</h2>
+                            <p class="product__post-title">Маркетинг</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product__item">
+                <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
+                    <div class="product__box">
+                        <div class="product__description description">
+                            <picture>
+                                <source srcset="./images/product/portfolio_img9.jpg 1x,
+                                                                            ./images/product/portfolio_img9_x2.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/product/portfolio_img9_tab.jpg 1x,
+                                                                            ./images/product/portfolio_img9_tab_x2.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/product/portfolio_img9_mob.jpg 1x,
+                                                                            ./images/product/portfolio_img9_mob_x2.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img class="team__img" src="images/product/portfolio_img9.jpg" alt="ноутбук">
+                            </picture>
+                            <div class="description__box">
+                                <p class="description__text">
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Quo totam voluptate qui
+                                    porro, libero sequi placeat. Eum maiores at neque
+                                    dolores quae quibusdam accusamus explicabo quas voluptas
+                                    odit quis veniam veritatis iste, ut eius nesciunt, nihil
+                                    atque laudantium non accusantium voluptatum ratione
+                                    dolore! Totam, ratione qui! Sequi ducimus temporibus
+                                    eaque consequatur quasi aliquid expedita. Soluta sunt
+                                    laborum veniam ipsa iste nesciunt, officiis facilis autem
+                                    dolorem provident.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product__text">
+                            <h2 class="product__title" lang="en">Growing Business</h2>
+                            <p class="product__post-title">Приложение</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>

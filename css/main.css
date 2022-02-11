@@ -48,7 +48,14 @@ body::-webkit-scrollbar-thumb {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  width: 480px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    min-width: 320px;
+    max-width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -377,8 +384,6 @@ button {
 }
 
 .header__wrap {
-  min-width: 320px;
-  min-width: 480px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -590,7 +595,6 @@ button {
 
 @media screen and (max-width: 767px) {
   .mob-menu__wrap {
-    width: 480px;
     height: 100vh;
     margin: auto;
     display: flex;
@@ -608,7 +612,6 @@ button {
 .mob-menu__btn {
   margin-left: auto;
   margin-top: 10px;
-  margin-right: 10px;
   background-color: #ffffff;
   border: none;
   box-sizing: border-box;
@@ -668,6 +671,15 @@ button {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 351px) {
+  .address-mob__item_top {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+
 .address-mob__item_bottom {
   margin-bottom: 64px;
 }
@@ -681,6 +693,15 @@ button {
   display: flex;
   margin-left: 15px;
   padding-bottom: 48px;
+}
+
+@media screen and (max-width: 410px) {
+  .social-mob {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
 }
 
 .social-mob__item:not(:last-child) {
@@ -741,6 +762,7 @@ button {
     margin-right: 70px;
     width: 231px;
     display: block;
+    padding-bottom: 0;
   }
 }
 
@@ -848,6 +870,12 @@ button {
   fill: #ffffff;
 }
 
+@media screen and (max-width: 767px) {
+  .subscription {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .subscription {
     margin-top: 12px;
@@ -896,8 +924,14 @@ button {
   color: #ffffff;
   outline: none;
   padding: 15px 16px;
-  width: 450px;
+  width: 100%;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -927,7 +961,8 @@ button {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  min-width: 480px;
+  width: 100%;
+  min-width: 320px;
   max-width: 480px;
 }
 
@@ -1145,6 +1180,7 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-top: 30px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -1285,6 +1321,13 @@ button {
   fill: currentColor;
 }
 
+@media screen and (max-width: 383px) {
+  .clients__icon {
+    width: 128px;
+    height: 128px;
+  }
+}
+
 .search {
   padding: 60px 15px 40px 15px;
 }
@@ -1347,6 +1390,7 @@ button {
 }
 
 .product__item {
+  overflow: hidden;
   flex-basis: 100%;
   margin-top: 30px;
   margin-left: 30px;

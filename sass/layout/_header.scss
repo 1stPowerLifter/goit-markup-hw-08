@@ -1,8 +1,6 @@
 .header {
   border-bottom: 1px solid #ececec;
   &__wrap {
-    min-width: 320px;
-    min-width: 480px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -153,7 +151,6 @@
   top: 0;
   &__wrap {
     @media screen and (max-width: 767px) {
-      width: 480px;
       height: 100vh;
       margin: auto;
       display: flex;
@@ -167,7 +164,6 @@
   &__btn {
     margin-left: auto;
     margin-top: 10px;
-    margin-right: 10px;
     background-color: getColor('white');
     border: none;
     box-sizing: border-box;
@@ -212,6 +208,9 @@
   &__item_top {
     color: getColor('brand');
     @include font(34px, 500, 1.18, 0.02em);
+    @media screen and (max-width: 351px) {
+      @include font(24px, 500, 1.17, 0.02em);
+    }
   }
   &__item_bottom {
     margin-bottom: 64px;
@@ -223,6 +222,9 @@
   display: flex;
   margin-left: 15px;
   padding-bottom: 48px;
+  @media screen and (max-width: 410px) {
+    @include font(12px, 500, 1.22, 00.02em);
+  }
   &__item:not(:last-child) {
     border-right: 1px solid getColor('grey');
   }
