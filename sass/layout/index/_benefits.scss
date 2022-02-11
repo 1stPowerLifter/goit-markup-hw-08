@@ -1,33 +1,57 @@
 .benefits {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 94px;
-    margin-left: -30px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include tab {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: -30px;
+    }
+    @include desk {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   &__box {
     height: 120px;
     background-color: getColor('bg');
     border-radius: 4px;
-    flex-basis: calc(100% / 4 - 30px);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
   }
+  &__item {
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+    @include tab {
+      margin-left: 30px;
+      flex-basis: calc(100% / 2 - 30px);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 30px;
+    }
+    @include desk {
+      flex-basis: calc(100% / 4 - 30px);
+    }
+  }
   &__icon {
     width: 70px;
     height: 70px;
-  }
-  &__item {
-    margin-left: 30px;
-    flex-basis: calc(100% / 4 - 30px);
   }
   &__title {
     @include font(14px, 700, 1.14, 00.03em);
     text-transform: uppercase;
     margin-bottom: 10px;
     color: getColor('black');
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 }

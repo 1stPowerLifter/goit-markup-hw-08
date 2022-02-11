@@ -14,40 +14,101 @@
     </head>
     <body class="body">
         <header class="header">
-                    <div class="container header__wrap">
-                        <nav class="nav">
-                            <a class="link logo nav__logo nav__logo_size" href="index.html" lang="en">
-                                Web<span class="header__span">Studio</span>
-                            </a>
-                            <ul class="list nav__list">
-                                <li class="nav__item">
-                                    <a class="link nav__link_size nav__link" href="index.html">Студия</a>
-                                </li>
-                                <li class="nav__item">
-                                    <a class="link current current_size nav__link_size nav__link" href="portfolio.html">Портфолио</a>
-                                </li>
-                                <li class="nav__item">
-                                    <a class="link nav__link_size nav__link" href="#">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <ul class="list header__address">
-                            <li class="header__item">
-                                <a class="link header__contact header__contact_size " href="mailto:info@devstudio.com">
-                                    <svg class="header__icon" width="16" height="12">
-                                        <use href="images/icons.svg#icon-mail"></use>
-                                    </svg>
-                                    info@devstudio.com</a>
+            <div class="container header__wrap">
+                <nav class="nav">
+                    <a class="link logo nav__logo nav__logo_size" href="index.html" lang="en">
+                        Web<span class="header__span">Studio</span>
+                    </a>
+                    <ul class="list nav__list">
+                        <li class="nav__item">
+                            <a class="link nav__link_size nav__link" href="index.html">Студия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link current current_size nav__link_size nav__link" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="link nav__link_size nav__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list header__address">
+                    <li class="header__item">
+                        <a class="link header__contact header__contact_size " href="mailto:info@devstudio.com">
+                            <svg class="header__icon" width="16" height="12">
+                                <use href="images/icons.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="link header__contact header__contact_size" href="tel:+380961111111">
+                            <svg class="header__icon" width="10" height="16">
+                                use href="images/icons.svg#icon-tel"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
+                </ul>
+                <button class="header__btn" type="button" data-mobile-menu-open>
+                    <svg class="heder__icon-open">
+                        <use href="images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mob-menu is-hidden" data-mobile-menu>
+                <div class="mob-menu__wrap">
+                    <div class="mob-menu_top">
+                        <button class="mob-menu__btn" data-mobile-menu-close>
+                            <svg class="mob-menu__icon-close">
+                                <use href="images/icons.svg#icon-modal-close"></use>
+                            </svg>
+                        </button>
+                        <ul class="list mob-menu__mob-nav mob-nav">
+                            <li class="mob-nav__item">
+                                <a class="link mob-nav__link " href="index.html">Студия</a>
                             </li>
-                            <li class="header__item">
-                                <a class="link header__contact header__contact_size" href="tel:+380961111111">
-                                    <svg class="header__icon" width="10" height="16">
-                                        <use href="images/icons.svg#icon-tel"></use>
-                                    </svg>
-                                    +38 096 111 11 11</a>
+                            <li class="mob-nav__item">
+                                <a class="link mob-nav__link " href="portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="mob-nav__item">
+                                <a class="link mob-nav__link " href="#">Контакты</a>
                             </li>
                         </ul>
                     </div>
+                    <div class="mob-menu_bottom">
+                        <ul class="list mob-menu__address-mob address-mob ">
+                            <li class="address-mob__item address-mob__item_top ">
+                                <a class="link address-mob__contact " href="mailto:info@devstudio.com">
+                                   info@devstudio.com</a>
+                            </li>
+                            <li class="address-mob__item address-mob__item_bottom">
+                                <a class="link address-mob__contact " href="tel:+380961111111">
+                                    +38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                        <ul class="list mob-menu__social-mob social-mob">
+                            <li class="social-mob__item">
+                                <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="social-mob__item">
+                                <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="social-mob__item">
+                                <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="social-mob__item">
+                                <a class="social-mob__link link" href="" target="_blank" rel="noreferrer noopener">
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
         <main class="portfolio">
             <div class="container search">
@@ -66,9 +127,18 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img.jpg" alt="ноутбук">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img.jpg 1x,
+                                            ./images/product/portfolio_img_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img_tab.jpg 1x,
+                                            ./images/product/portfolio_img_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img_mob.jpg 1x,
+                                            ./images/product/portfolio_img_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img.jpg" alt="ноутбук">
+                                    </picture>
                                     <div class="description__box">
-                                        <p class="description__text">Технокряк это современная площадка распространения коронавируса. Компании используют
+                                        <p class="description__text">Технокряк это современная площадка распространения
+                                            коронавируса. Компании используют
                                             эту платформу для цифрового
                                             шпионажа и атак на защищённые сервера конкурентов.</p>
                                     </div>
@@ -78,13 +148,21 @@
                                     <p class="product__post-title">Веб-сайт</p>
                                 </div>
                             </div>
-                        </a>    
+                        </a>
                     </li>
                     <li class="product__item">
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img2.jpg" alt="два баскетболиста">   
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img2.jpg 1x,
+                                            ./images/product/portfolio_img2_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img2_tab.jpg 1x,
+                                            ./images/product/portfolio_img2_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img2_mob.jpg 1x,
+                                            ./images/product/portfolio_img2_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img2.jpg" alt="баскетболисты">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, non?
@@ -102,7 +180,15 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img3.jpg" alt="эмблема в форме рыбы с названием ресторана">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img3.jpg 1x,
+                                            ./images/product/portfolio_img3_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img3_tab.jpg 1x,
+                                            ./images/product/portfolio_img3_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img3_mob.jpg 1x,
+                                            ./images/product/portfolio_img3_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img3.jpg" alt="эмблема ресторана">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, vel!
@@ -120,7 +206,15 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img4.jpg" alt="наушники">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img4.jpg 1x,
+                                            ./images/product/portfolio_img4_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img4_tab.jpg 1x,
+                                            ./images/product/portfolio_img4_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img4_mob.jpg 1x,
+                                            ./images/product/portfolio_img4_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img4.jpg" alt="наушники">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, atque?
@@ -138,11 +232,19 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img5.jpg" alt="два кубика">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img5.jpg 1x,
+                                            ./images/product/portfolio_img5_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img5_tab.jpg 1x,
+                                            ./images/product/portfolio_img5_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img5_mob.jpg 1x,
+                                            ./images/product/portfolio_img5_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img5.jpg" alt="кубики">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi fugit enim,
-                                             similique incidunt earum suscipit ipsam recusandae officiis accusamus.
+                                            similique incidunt earum suscipit ipsam recusandae officiis accusamus.
                                         </p>
                                     </div>
                                 </div>
@@ -157,7 +259,18 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img6.jpg" alt="экран компьютера">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img6.jpg 1x,
+                                                                        ./images/product/portfolio_img6_x2.jpg 2x"
+                                            media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img6_tab.jpg 1x,
+                                                                        ./images/product/portfolio_img6_tab_x2.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img6_mob.jpg 1x,
+                                                                        ./images/product/portfolio_img6_mob_x2.jpg 2x"
+                                            media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img6.jpg" alt="экран компьютера">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, porro.
@@ -175,7 +288,15 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img7.jpg" alt="журнал">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img7.jpg 1x,
+                                            ./images/product/portfolio_img7_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img7_tab.jpg 1x,
+                                            ./images/product/portfolio_img7_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img7_mob.jpg 1x,
+                                            ./images/product/portfolio_img7_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img7.jpg" alt="журнал">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, atque?
@@ -186,14 +307,22 @@
                                     <h2 class="product__title">Издание Limited Edition</h2>
                                     <p class="product__post-title">Дизайн</p>
                                 </div>
-                            </div> 
+                            </div>
                         </a>
                     </li>
                     <li class="product__item">
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img8.jpg" alt="вкладыш">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img8.jpg 1x,
+                                            ./images/product/portfolio_img8_x2.jpg 2x" media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img8_tab.jpg 1x,
+                                            ./images/product/portfolio_img8_tab_x2.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img8_mob.jpg 1x,
+                                            ./images/product/portfolio_img8_mob_x2.jpg 2x" media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img8.jpg" alt="вкладыш">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, dolor.
@@ -211,27 +340,38 @@
                         <a class="product__link link" href="" target="_blank" rel="noreferrer noopener">
                             <div class="product__box">
                                 <div class="product__description description">
-                                    <img class="description__img" width="370" src="images/product/portfolio_img9.jpg" alt="ноутбук">
+                                    <picture>
+                                        <source srcset="./images/product/portfolio_img9.jpg 1x,
+                                                                        ./images/product/portfolio_img9_x2.jpg 2x"
+                                            media="(min-width: 1200px)" width="270">
+                                        <source srcset="./images/product/portfolio_img9_tab.jpg 1x,
+                                                                        ./images/product/portfolio_img9_tab_x2.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/product/portfolio_img9_mob.jpg 1x,
+                                                                        ./images/product/portfolio_img9_mob_x2.jpg 2x"
+                                            media="(min-width: 320px)">
+                                        <img class="team__img" src="images/product/portfolio_img9.jpg" alt="ноутбук">
+                                    </picture>
                                     <div class="description__box">
                                         <p class="description__text">
-                                            Lorem ipsum dolor, sit amet consectetur 
-                                            adipisicing elit. Quo totam voluptate qui 
-                                            porro, libero sequi placeat. Eum maiores at neque 
-                                            dolores quae quibusdam accusamus explicabo quas voluptas 
-                                            odit quis veniam veritatis iste, ut eius nesciunt, nihil 
-                                            atque laudantium non accusantium voluptatum ratione 
-                                            dolore! Totam, ratione qui! Sequi ducimus temporibus 
-                                            eaque consequatur quasi aliquid expedita. Soluta sunt 
-                                            laborum veniam ipsa iste nesciunt, officiis facilis autem 
+                                            Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing elit. Quo totam voluptate qui
+                                            porro, libero sequi placeat. Eum maiores at neque
+                                            dolores quae quibusdam accusamus explicabo quas voluptas
+                                            odit quis veniam veritatis iste, ut eius nesciunt, nihil
+                                            atque laudantium non accusantium voluptatum ratione
+                                            dolore! Totam, ratione qui! Sequi ducimus temporibus
+                                            eaque consequatur quasi aliquid expedita. Soluta sunt
+                                            laborum veniam ipsa iste nesciunt, officiis facilis autem
                                             dolorem provident.
-                                        </p>                              
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="product__text">
                                     <h2 class="product__title" lang="en">Growing Business</h2>
                                     <p class="product__post-title">Приложение</p>
                                 </div>
-                            </div> 
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -250,69 +390,72 @@
                         </button>
                     </form>
                 </div>
-                <div class="social">
-                    <h2 class="social__title social__title_m_bottom ">Присойденяйтесь</h2>
-                    <ul class="social__list list">
-                        <li class="social__item">
-                            <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
-                                <div class="social__box">
-                                    <svg class="social__icon">
-                                        <use href="images/icons.svg#icon-instagram-2-1"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
-                                <div class="social__box">
-                                    <svg class="social__icon">
-                                        <use href="images/icons.svg#icon-twitter-1"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
-                                <div class="social__box">
-                                    <svg class="social__icon">
-                                        <use href="images/icons.svg#icon-facebook-1"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
-                                <div class="social__box">
-                                    <svg class="social__icon">
-                                        <use href="images/icons.svg#icon-linkedin-1"></use>
-                                    </svg>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="address__wrap">
-                    <a class="link logo footer__logo" href="index.html" lang="en">
-                        Web<span class="footer__span">Studio</span>
-                    </a>
-                    <address class="address">
-                        <ul class="list address__list">
-                            <li class="address__item">
-                                <a class="link address__link"
-                                    href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!4m13!1m7!3m6!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!2z0LHRg9C7LiDQm9C10YHQuCDQo9C60YDQsNC40L3QutC4LCAyNiwg0JrQuNC10LIsIDAyMDAw!3b1!8m2!3d50.4265807!4d30.5383858!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
-                                    target="_blank" rel="noreferrer noopener">
-                                    г. Киев, пр-т Леси Украинки, 26</a>
+                <div class="footer__wrap_top">
+                    <div class="social">
+                        <h2 class="social__title social__title_m_bottom ">Присойденяйтесь</h2>
+                        <ul class="social__list list">
+                            <li class="social__item">
+                                <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
+                                    <div class="social__box">
+                                        <svg class="social__icon">
+                                            <use href="images/icons.svg#icon-instagram-2-1"></use>
+                                        </svg>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="address__item">
-                                <a class="link address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            <li class="social__item">
+                                <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
+                                    <div class="social__box">
+                                        <svg class="social__icon">
+                                            <use href="images/icons.svg#icon-twitter-1"></use>
+                                        </svg>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="address__item"><a class="link address__contact" href="tel:+380961111111">
-                                    +38 096 111 11 11</a>
+                            <li class="social__item">
+                                <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
+                                    <div class="social__box">
+                                        <svg class="social__icon">
+                                            <use href="images/icons.svg#icon-facebook-1"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="" class="social__link" target="_blank" rel="noreferrer noopener">
+                                    <div class="social__box">
+                                        <svg class="social__icon">
+                                            <use href="images/icons.svg#icon-linkedin-1"></use>
+                                        </svg>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
-                    </address>
+                    </div>
+                    <div class="address__wrap">
+                        <a class="link logo address__logo" href="index.html" lang="en">
+                            Web<span class="address__span">Studio</span>
+                        </a>
+                        <address class="address">
+                            <ul class="list address__list">
+                                <li class="address__item">
+                                    <a class="link address__link"
+                                        href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!4m13!1m7!3m6!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!2z0LHRg9C7LiDQm9C10YHQuCDQo9C60YDQsNC40L3QutC4LCAyNiwg0JrQuNC10LIsIDAyMDAw!3b1!8m2!3d50.4265807!4d30.5383858!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+                                        target="_blank" rel="noreferrer noopener">
+                                        г. Киев, пр-т Леси Украинки, 26</a>
+                                </li>
+                                <li class="address__item">
+                                    <a class="link address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                </li>
+                                <li class="address__item"><a class="link address__contact" href="tel:+380961111111">
+                                        +38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
                 </div>
             </div>
         </footer>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

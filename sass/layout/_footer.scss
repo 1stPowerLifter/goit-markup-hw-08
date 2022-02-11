@@ -1,14 +1,24 @@
 .footer {
   background: #2f303a;
   &__wrap {
-    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
-  &__span {
-    color: getColor('white');
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    &_top {
+      display: flex;
+      flex-direction: column-reverse;
+      @include tab {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+    }
+    @include desk {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -16,12 +26,35 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    margin-right: 70px;
-    width: 231px;
+    align-items: center;
+    padding-bottom: 60px;
+    @include tab {
+      margin-right: 165px;
+    }
+    @include desk {
+      margin-right: 70px;
+      width: 231px;
+      display: block;
+    }
+  }
+  &__span {
+    color: getColor('white');
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include desk {
+      display: block;
+    }
   }
   &__item {
     &:not(:last-child) {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
+      @include desk {
+        margin-bottom: 9px;
+      }
     }
     &:first-child {
       margin-top: 20px;
@@ -40,11 +73,20 @@
 }
 
 .social {
+  padding-bottom: 60px;
+  @include desk {
+    padding-bottom: 0;
+    margin-top: 12px;
+  }
   &__title {
+    text-align: center;
     font-size: 14px;
     line-height: (16 / 14);
     text-transform: uppercase;
     color: getColor('white');
+    @include desk {
+      text-align: left;
+    }
     &_m_bottom {
       margin-bottom: 20px;
     }
@@ -58,6 +100,7 @@
     }
   }
   &__link {
+    background-color: rgba(255, 255, 255, 0.1);
     &:hover,
     &:focus {
       background-color: getColor('brand');
@@ -80,16 +123,30 @@
 }
 
 .subscription {
-  margin-left: 93px;
+  @include desk {
+    margin-top: 12px;
+  }
+  @include desk {
+    margin-left: 93px;
+  }
   &__title {
+    text-align: center;
     font-size: 14px;
     line-height: (16 / 14);
     text-transform: uppercase;
     color: getColor('white');
     margin-bottom: 20px;
+    @include desk {
+      text-align: left;
+    }
   }
   &__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desk {
+      flex-direction: row;
+    }
   }
   &__input {
     height: 50px;
@@ -97,11 +154,16 @@
     box-sizing: border-box;
     background: transparent;
     border-radius: 4px;
-    margin-right: 12px;
-    width: 358px;
     color: getColor('white');
     outline: none;
     padding: 15px 16px;
+    width: 450px;
+    margin-bottom: 20px;
+    @include desk {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
   }
   &__btn {
     display: flex;

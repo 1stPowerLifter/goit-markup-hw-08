@@ -1,8 +1,18 @@
 .search {
+  padding: 60px 15px 40px 15px;
+  @include tab {
+    padding: 60px 15px 30px 15px;
+  }
+  @include desk {
+    padding: 94px 15px 50px 15px;
+  }
+
   &__list {
     display: flex;
-    padding: 94px 0 50px 0;
-    justify-content: center;
+    flex-wrap: wrap;
+    @include tab {
+      justify-content: center;
+    }
   }
   &__item {
     &:not(:last-child) {

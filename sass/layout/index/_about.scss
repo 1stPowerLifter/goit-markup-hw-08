@@ -1,4 +1,7 @@
 .about {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
