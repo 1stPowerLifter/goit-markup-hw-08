@@ -73,11 +73,26 @@
 }
 .checkbox {
   &__text {
-    @include font(14px, 400, 1.14, 0.03em);
+    @include font(12px, 400, 1.14, 0.03em);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @media screen and (max-width: 448px) {
+      @include font(11px, 400, 1.14, 0.03em);
+    }
+    @media screen and (max-width: 420px) {
+      @include font(10px, 400, 1.14, 0.03em);
+    }
+    @media screen and (max-width: 391px) {
+      @include font(9px, 400, 1.14, 0.03em);
+    }
+    @media screen and (max-width: 391px) {
+      @include font(8px, 400, 1.14, 0.03em);
+    }
+    @media screen and (max-width: 391px) {
+      @include font(7px, 400, 1.14, 0.03em);
+    }
     @include desk {
       @include font(14px, 400, 1.71, 0.03em);
     }
