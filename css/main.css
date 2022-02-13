@@ -363,7 +363,7 @@ button {
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 363px) {
   .checkbox__text {
     font-size: 8px;
     font-weight: 400;
@@ -372,7 +372,7 @@ button {
   }
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 335px) {
   .checkbox__text {
     font-size: 7px;
     font-weight: 400;
